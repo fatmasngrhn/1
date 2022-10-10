@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stok Takip</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <div class="header">
+        <ul>
+            <li><a href="/">Anasayfa</a></li>
+            <li><a href="/products">Ürünler</a></li>
+            {% if userstate %}
+                <li><a href="/logout">Çıkış Yap</a></li>
+            {% endif %}
+        </ul>
+    </div>
+    <div class="content">
+        {% if userstate %}
+            <p>Giris Yapildi</p>
+        {% else %}
+            <p>Giris Yapilmadi</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
